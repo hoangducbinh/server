@@ -16,3 +16,5 @@ categoryRoutes.route("/:id").get(getCategoryById as any)
 
 
 export default categoryRoutes;
+
+
