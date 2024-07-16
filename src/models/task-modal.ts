@@ -19,14 +19,18 @@ const taskSchema = new mongoose.Schema({
       type: Boolean,
       default: false,
     },
+    isEditable: {
+      type: Boolean,
+      default: false,
+    },
     date: {
       type: String,
       required: true,
     },
-    // describe:{
-    //   type: String,
-    //   required: true,
-    // }
+    describe:{
+      type: String,
+      required: false,
+    }
   },{
     timestamps: true,
   }
