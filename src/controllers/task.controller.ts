@@ -30,7 +30,6 @@ const createTask = async (request: AuthRequest, response: Response) => {
                 name,
                 date,
                 categoryId,
-                describe: "",
                 user: request.user
             }
         )
