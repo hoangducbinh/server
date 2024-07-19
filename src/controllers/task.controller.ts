@@ -11,7 +11,6 @@ const getAllTasks = async (request: AuthRequest, response: Response) => {
         const userId = request.user;
         const tasks = await Task.find({
             user: userId,
-            isCompleted: false
         });
         
         return response.send(tasks);
