@@ -140,7 +140,7 @@ const deleteTask = async (request: AuthRequest, response: Response) => {
 
 const editTask = async (request: AuthRequest, response: Response) => {
     try {
-      const { _id, categoryId, date, name }: ITask = request.body
+      const { _id, categoryId, date, name,describe }: ITask = request.body
       await Task.updateOne(
         {
           _id,
@@ -150,6 +150,7 @@ const editTask = async (request: AuthRequest, response: Response) => {
             name,
             categoryId,
             date,
+            describe
           },
         }
       )
