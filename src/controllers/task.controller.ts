@@ -50,6 +50,7 @@ const createTask = async (request: AuthRequest, response: Response) => {
                 user: request.user,
             }
         )
+        
         response.status(200).send(task);
     } catch (error) {
         console.log("Error creating task", error);
